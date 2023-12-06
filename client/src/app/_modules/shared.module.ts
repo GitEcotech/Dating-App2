@@ -7,6 +7,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FileUploadModule } from 'ng2-file-upload';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 interface NgxSpinnerConfig{
   type?: string;
@@ -22,7 +23,8 @@ interface NgxSpinnerConfig{
     }),
     NgxGalleryModule,
     NgxSpinnerModule.forRoot({ type: 'square-jelly-box' }),
-    FileUploadModule
+    FileUploadModule,
+    BsDatepickerModule.forRoot()
   ],
   exports:[
     BsDropdownModule,
@@ -30,7 +32,8 @@ interface NgxSpinnerConfig{
     TabsModule,
     NgxGalleryModule,
     NgxSpinnerModule,
-    FileUploadModule
+    FileUploadModule,
+    BsDatepickerModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -8,10 +8,11 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TimeagoModule } from 'ngx-timeago';
 
-interface NgxSpinnerConfig{
-  type?: string;
-}
+
 @NgModule({
   declarations: [],
   imports: [
@@ -24,7 +25,10 @@ interface NgxSpinnerConfig{
     NgxGalleryModule,
     NgxSpinnerModule.forRoot({ type: 'square-jelly-box' }),
     FileUploadModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
+    TimeagoModule.forRoot()
   ],
   exports:[
     BsDropdownModule,
@@ -33,7 +37,10 @@ interface NgxSpinnerConfig{
     NgxGalleryModule,
     NgxSpinnerModule,
     FileUploadModule,
-    BsDatepickerModule
+    BsDatepickerModule,
+    PaginationModule,
+    ButtonsModule,
+    TimeagoModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

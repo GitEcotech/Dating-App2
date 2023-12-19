@@ -33,7 +33,6 @@ import { DatepickerComponent } from './_forms/datepicker/datepicker.component';
     HomeComponent,
     RegisterComponent,
     MemberListComponent,
-    MemberDetailComponent,
     ListsComponent,
     MessagesComponent,
     TestErrorComponent,
@@ -53,6 +52,7 @@ import { DatepickerComponent } from './_forms/datepicker/datepicker.component';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    MemberDetailComponent
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass:ErrorInterceptor, multi:true},
